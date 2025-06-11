@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FHIR Patient Search</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <h2>FHIR Patient Search</h2>
+
+  <label for="patientSearch">Search Patient by Name:</label>
+  <input type="text" id="patientSearch" placeholder="e.g., John">
+  <select id="patientSelect" onchange="fetchPatientDetails()">
+    <option value="">-- Select Patient ID --</option>
+  </select>
+
+  <h3>Patient Details:</h3>
+  <p>First Name: <span id="firstName"></span></p>
+  <p>Last Name: <span id="lastName"></span></p>
+  <p>Gender: <span id="gender"></span></p>
+  <p>DOB: <span id="dob"></span></p>
+  <p>Address: <span id="address"></span></p>
+
+  <script src="fhir-app.js"></script>
+</body>
+</html>
